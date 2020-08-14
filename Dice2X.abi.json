@@ -1,0 +1,498 @@
+{
+	"ABI version": 2,
+	"header": ["time"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"h","type":"uint64"},
+				{"name":"m","type":"uint64"},
+				{"name":"s","type":"uint64"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getJackpot",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value","type":"uint128"}
+			]
+		},
+		{
+			"name": "getJackpotTax",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value","type":"uint128"}
+			]
+		},
+		{
+			"name": "getDividendsTax",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value","type":"uint128"}
+			]
+		},
+		{
+			"name": "getChanceToWin",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value","type":"uint128"}
+			]
+		},
+		{
+			"name": "getAverageTriesToWinJackpotUsingOneCoin",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value","type":"uint128"}
+			]
+		},
+		{
+			"name": "getReturnAmountOnLosing",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value","type":"uint128"}
+			]
+		},
+		{
+			"name": "getConfirmationAmount",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value","type":"uint128"}
+			]
+		},
+		{
+			"name": "getTokensMultiplier",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value","type":"uint64"}
+			]
+		},
+		{
+			"name": "getLimitMinBet",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value","type":"uint128"}
+			]
+		},
+		{
+			"name": "getLimitMaxBet",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value","type":"uint128"}
+			]
+		},
+		{
+			"name": "getLimitHistoryLength",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value","type":"uint64"}
+			]
+		},
+		{
+			"name": "getDonorBank",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value","type":"address"}
+			]
+		},
+		{
+			"name": "getDonorJackpot",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value","type":"address"}
+			]
+		},
+		{
+			"name": "getTotal",
+			"inputs": [
+				{"name":"offset","type":"uint64"},
+				{"name":"limit","type":"uint64"}
+			],
+			"outputs": [
+				{"name":"betsCount","type":"uint64"},
+				{"name":"betsAmount","type":"uint256"},
+				{"name":"winsCount","type":"uint64"},
+				{"name":"winsAmount","type":"uint256"},
+				{"name":"tokens","type":"uint128"},
+				{"name":"lastPeriodId","type":"uint64"},
+				{"name":"dividends","type":"uint128"},
+				{"name":"dividendsPayout","type":"uint128"},
+				{"name":"dividendsInCurrentPeriod","type":"uint128"},
+				{"name":"jackpot","type":"uint128"},
+				{"name":"jackpotTax","type":"uint128"},
+				{"name":"dividendsTax","type":"uint128"},
+				{"name":"chanceToWin","type":"uint128"},
+				{"name":"averageTriesToWinJackpotUsingOneCoin","type":"uint128"},
+				{"name":"historyId","type":"uint64[]"},
+				{"name":"historyTime","type":"uint64[]"},
+				{"name":"historyAddr","type":"address[]"},
+				{"name":"historyAmount","type":"uint128[]"},
+				{"name":"historyWin","type":"bool[]"},
+				{"name":"historyWinAmount","type":"uint128[]"},
+				{"name":"historyJackpot","type":"bool[]"},
+				{"name":"historyJackpotAmount","type":"uint128[]"},
+				{"name":"historyMultiplier","type":"uint128[]"},
+				{"name":"historyLength","type":"uint256"}
+			]
+		},
+		{
+			"name": "getPeriods",
+			"inputs": [
+				{"name":"offset","type":"uint64"},
+				{"name":"limit","type":"uint64"}
+			],
+			"outputs": [
+				{"name":"tokens","type":"uint128[]"},
+				{"name":"amount","type":"uint128[]"}
+			]
+		},
+		{
+			"name": "getLastHistory",
+			"inputs": [
+				{"name":"limit","type":"uint64"}
+			],
+			"outputs": [
+				{"name":"id","type":"uint64[]"},
+				{"name":"time","type":"uint64[]"},
+				{"name":"addr","type":"address[]"},
+				{"name":"amount","type":"uint128[]"},
+				{"name":"win","type":"bool[]"},
+				{"name":"winAmount","type":"uint128[]"},
+				{"name":"jackpot","type":"bool[]"},
+				{"name":"jackpotAmount","type":"uint128[]"},
+				{"name":"multiplier","type":"uint128[]"}
+			]
+		},
+		{
+			"name": "getUser",
+			"inputs": [
+				{"name":"user","type":"address"},
+				{"name":"offset","type":"uint64"},
+				{"name":"limit","type":"uint64"}
+			],
+			"outputs": [
+				{"name":"betsCount","type":"uint64"},
+				{"name":"betsAmount","type":"uint256"},
+				{"name":"winsCount","type":"uint64"},
+				{"name":"winsAmount","type":"uint256"},
+				{"name":"tokens","type":"uint128"},
+				{"name":"lastPeriodId","type":"uint64"},
+				{"name":"dividends","type":"uint128"},
+				{"name":"dividendsPayout","type":"uint128"},
+				{"name":"dividendsInCurrentPeriod","type":"uint128"},
+				{"name":"historyId","type":"uint64[]"},
+				{"name":"historyTime","type":"uint64[]"},
+				{"name":"historyAddr","type":"address[]"},
+				{"name":"historyAmount","type":"uint128[]"},
+				{"name":"historyWin","type":"bool[]"},
+				{"name":"historyWinAmount","type":"uint128[]"},
+				{"name":"historyJackpot","type":"bool[]"},
+				{"name":"historyJackpotAmount","type":"uint128[]"},
+				{"name":"historyMultiplier","type":"uint128[]"},
+				{"name":"historyLength","type":"uint256"}
+			]
+		},
+		{
+			"name": "userExist",
+			"inputs": [
+				{"name":"user","type":"address"}
+			],
+			"outputs": [
+				{"name":"value","type":"bool"}
+			]
+		},
+		{
+			"name": "getUserPeriods",
+			"inputs": [
+				{"name":"user","type":"address"},
+				{"name":"offset","type":"uint64"},
+				{"name":"limit","type":"uint64"}
+			],
+			"outputs": [
+				{"name":"tokens","type":"uint128[]"},
+				{"name":"amount","type":"uint128[]"}
+			]
+		},
+		{
+			"name": "getUserLastHistory",
+			"inputs": [
+				{"name":"user","type":"address"},
+				{"name":"limit","type":"uint64"}
+			],
+			"outputs": [
+				{"name":"id","type":"uint64[]"},
+				{"name":"time","type":"uint64[]"},
+				{"name":"addr","type":"address[]"},
+				{"name":"amount","type":"uint128[]"},
+				{"name":"win","type":"bool[]"},
+				{"name":"winAmount","type":"uint128[]"},
+				{"name":"jackpot","type":"bool[]"},
+				{"name":"jackpotAmount","type":"uint128[]"},
+				{"name":"multiplier","type":"uint128[]"}
+			]
+		},
+		{
+			"name": "getJackpotCount",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "getJackpotHistory",
+			"inputs": [
+				{"name":"offset","type":"uint64"},
+				{"name":"limit","type":"uint64"}
+			],
+			"outputs": [
+				{"name":"id","type":"uint64[]"},
+				{"name":"time","type":"uint64[]"},
+				{"name":"addr","type":"address[]"},
+				{"name":"amount","type":"uint128[]"},
+				{"name":"win","type":"bool[]"},
+				{"name":"winAmount","type":"uint128[]"},
+				{"name":"jackpot","type":"bool[]"},
+				{"name":"jackpotAmount","type":"uint128[]"},
+				{"name":"multiplier","type":"uint128[]"}
+			]
+		},
+		{
+			"name": "getJackpotLastHistory",
+			"inputs": [
+				{"name":"limit","type":"uint64"}
+			],
+			"outputs": [
+				{"name":"id","type":"uint64[]"},
+				{"name":"time","type":"uint64[]"},
+				{"name":"addr","type":"address[]"},
+				{"name":"amount","type":"uint128[]"},
+				{"name":"win","type":"bool[]"},
+				{"name":"winAmount","type":"uint128[]"},
+				{"name":"jackpot","type":"bool[]"},
+				{"name":"jackpotAmount","type":"uint128[]"},
+				{"name":"multiplier","type":"uint128[]"}
+			]
+		},
+		{
+			"name": "getMultipliers",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"values","type":"uint128[]"}
+			]
+		},
+		{
+			"name": "getMultiplier",
+			"inputs": [
+				{"name":"index","type":"uint64"}
+			],
+			"outputs": [
+				{"name":"message","type":"uint8[]"},
+				{"name":"values","type":"uint128"}
+			]
+		},
+		{
+			"name": "setJackpotTax",
+			"inputs": [
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+				{"name":"prev","type":"uint128"},
+				{"name":"current","type":"uint128"}
+			]
+		},
+		{
+			"name": "setDividendsTax",
+			"inputs": [
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+				{"name":"prev","type":"uint128"},
+				{"name":"current","type":"uint128"}
+			]
+		},
+		{
+			"name": "setChanceToWin",
+			"inputs": [
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+				{"name":"prev","type":"uint128"},
+				{"name":"current","type":"uint128"}
+			]
+		},
+		{
+			"name": "setAverageTriesToWinJackpotUsingOneCoin",
+			"inputs": [
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+				{"name":"prev","type":"uint128"},
+				{"name":"current","type":"uint128"}
+			]
+		},
+		{
+			"name": "setReturnAmountOnLosing",
+			"inputs": [
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+				{"name":"prev","type":"uint128"},
+				{"name":"current","type":"uint128"}
+			]
+		},
+		{
+			"name": "setConfirmationAmount",
+			"inputs": [
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+				{"name":"prev","type":"uint128"},
+				{"name":"current","type":"uint128"}
+			]
+		},
+		{
+			"name": "setTokensMultiplier",
+			"inputs": [
+				{"name":"value","type":"uint64"}
+			],
+			"outputs": [
+				{"name":"prev","type":"uint64"},
+				{"name":"current","type":"uint64"}
+			]
+		},
+		{
+			"name": "setLimitMinBet",
+			"inputs": [
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+				{"name":"prev","type":"uint128"},
+				{"name":"current","type":"uint128"}
+			]
+		},
+		{
+			"name": "setLimitMaxBet",
+			"inputs": [
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+				{"name":"prev","type":"uint128"},
+				{"name":"current","type":"uint128"}
+			]
+		},
+		{
+			"name": "setLimitHistoryLength",
+			"inputs": [
+				{"name":"value","type":"uint64"}
+			],
+			"outputs": [
+				{"name":"prev","type":"uint64"},
+				{"name":"current","type":"uint64"}
+			]
+		},
+		{
+			"name": "setDonorBank",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+				{"name":"prev","type":"address"},
+				{"name":"current","type":"address"}
+			]
+		},
+		{
+			"name": "setDonorJackpot",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+				{"name":"prev","type":"address"},
+				{"name":"current","type":"address"}
+			]
+		},
+		{
+			"name": "clearDonorBank",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"prev","type":"address"},
+				{"name":"current","type":"address"}
+			]
+		},
+		{
+			"name": "clearDonorJackpot",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"prev","type":"address"},
+				{"name":"current","type":"address"}
+			]
+		},
+		{
+			"name": "sendTransaction",
+			"inputs": [
+				{"name":"addr","type":"address"},
+				{"name":"value","type":"uint128"},
+				{"name":"bounce","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "destroy",
+			"inputs": [
+				{"name":"addr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "addMultiplier",
+			"inputs": [
+				{"name":"message","type":"uint8[]"},
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+				{"name":"length","type":"uint64"}
+			]
+		},
+		{
+			"name": "removeMultiplier",
+			"inputs": [
+				{"name":"index","type":"uint64"}
+			],
+			"outputs": [
+				{"name":"message","type":"uint8[]"},
+				{"name":"value","type":"uint128"}
+			]
+		},
+		{
+			"name": "upgrade",
+			"inputs": [
+				{"name":"cell","type":"cell"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	]
+}
